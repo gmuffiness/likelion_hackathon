@@ -1,0 +1,31 @@
+{% extends "community/layout.html" %}
+{% load bootstrap4 %}
+
+{{ post.add_view }}
+
+{% block title %}
+    Post detail pk#{{ post.pk }}
+{% endblock title %}
+
+{% block content %}
+    <h2>Author  :  {{ post.author }}</h2>
+
+    {% if post.photo %}
+        <img src="{{ post.photo.url }}"/>
+    {% endif %}
+
+    {{ post.message|linebreaks }}
+    <hr/>
+    <a href="{% url 'community:post_list' %}" class="btn btn-primary">
+        목록
+    </a>
+
+    <a href="{% url 'community:post_edit' post.pk %}" class="btn btn-info">
+        수정
+    </a>
+
+    <a href="{% url 'community:post_delete' post.pk %}" class="btn btn-danger">
+        삭제
+    </a>
+    <div class="blank-container"></div>
+{% endblock content %}

@@ -1,0 +1,31 @@
+{% extends "community/layout.html" %}
+{% load bootstrap4 %}
+
+{% block content %}
+
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        {% bootstrap_form form %}
+        {% buttons %}
+            <button class="btn btn-primary">
+                저장
+            </button>
+        {% endbuttons %}
+    </form>
+
+    <hr/>
+
+    {% if post %}
+        <a href="{{ post.get_absolute_url }}" class="btn btn-secondary ">
+            내용으로
+        </a>
+    {% else %}
+        New
+    {% endif %}
+
+    <a href="{% url 'community:post_list' %}" class="btn btn-primary">
+        목록
+    </a>
+    <div class="blank-container"></div>
+{% endblock %}
