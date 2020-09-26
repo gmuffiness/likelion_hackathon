@@ -17,9 +17,9 @@
             <td>
                 
             </td>
-            <td>
+            <!-- <td>
                 글쓴이
-            </td>
+            </td> -->
             <td>
                 내용
             </td>
@@ -31,15 +31,18 @@
             <tr>
                 <td>
                     {{ post.pk }}
+                    
                 </td>
-                <td>
+                <!-- <td>
                     {{ user }}
-                </td>
+                </td> -->
                 <td>
                     <a href="{% url 'community:post_detail' post.pk %}">
                     <!-- <a href="{{ post.get_absolute_url }}"> -->
+                        
                         {{ post.message }}
-                    </a>
+                    </a><br>
+                    {{ user }}
                 </td>
                 <td>
                     {{ post.view }}
