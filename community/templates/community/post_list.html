@@ -3,20 +3,20 @@
 
 {% block content %}
 
-    <h3>JobKoreaUSA 커뮤니티</h3>
+    <h3 style="color: #3598fe">Community</h3>
 
-    <form action="" method="GET">
+    <!-- <form action="" method="GET">
         <input type="text" name="q" value="{{ q }}"/>
         <input type="submit" value="검색">
-    </form>
+    </form> -->
 
-    <a href="{% url 'community:post_new' %}" class="btn btn-primary btn-block mt-3 mb-3">새 포스팅</a>
+    <a href="{% url 'community:post_new' %}" class="btn btn-primary mt-3 mb-3" style="float: right;">새 포스팅</a>
 
     <table class ="table table-bordered table-hover">
         <tr>
-            <td>
+            <!-- <td>
                 
-            </td>
+            </td> -->
             <!-- <td>
                 글쓴이
             </td> -->
@@ -29,20 +29,20 @@
         </tr>
         {% for post in post_list %}
             <tr>
-                <td>
+                <!-- <td>
                     {{ post.pk }}
                     
-                </td>
+                </td> -->
                 <!-- <td>
                     {{ user }}
                 </td> -->
                 <td>
-                    <a href="{% url 'community:post_detail' post.pk %}">
+                    <a href="{% url 'community:post_detail' post.pk %}" class="cmu-post-title">
                     <!-- <a href="{{ post.get_absolute_url }}"> -->
+                        {{ post.title }}
                         
-                        {{ post.message }}
                     </a><br>
-                    {{ user }}
+                    글쓴이 : {{ user }}
                 </td>
                 <td>
                     {{ post.view }}

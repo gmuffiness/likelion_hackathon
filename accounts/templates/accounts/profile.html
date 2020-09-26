@@ -6,8 +6,8 @@
 
     {% if user.profile %}
         <ul>
-            <li>{{ user.profile.address }}</li>
-            <li>{{ user.profile.zipcode }}</li>
+            <li>주소 : {{ user.profile.address }}</li>
+            <li>우편번호 : {{ user.profile.zipcode }}</li>
         </ul>
     {% endif %}
 

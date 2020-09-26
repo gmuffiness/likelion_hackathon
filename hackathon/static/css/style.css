@@ -13,6 +13,14 @@ body {
     color: black;
 }
 
+a {
+    text-decoration: none;
+}
+
+#info {
+    text-decoration: none;
+}
+
 header {
     background-color: var(--Blue);
     display: flex;
@@ -43,6 +51,19 @@ nav {
     font-size: 30px;
     color: white;
 }
+
+.nav-custom:hover{
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+}
+
+button a {
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+}
+
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -132,4 +153,8 @@ footer .attribution {
 
 div .blank-container{
     height: 200px;
+}
+
+.cmu-post-title{
+    font-size: 20px;
 }

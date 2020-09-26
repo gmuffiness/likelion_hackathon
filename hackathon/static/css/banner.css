@@ -1,21 +1,29 @@
 body {
-    background: #e2e1e0;
+    background: white;
     text-align: center;
 }
-a{
+button{
+    background:none;
+    border:none;
+}
+
+button a{
     text-decoration: none;
     color:black;
     border:1px solid black;
     border-radius: 10px;
     padding:5px;
 }
-a:hover{
+button a:hover{
+    text-decoration: none;
     background-color: white;
     border:none;
 }
 .card_section{
+    transform: translateX(5%);
     display:flex;
     flex-wrap: wrap;
+    padding: 20px 0 80px 0;
 }
 .card {
     background: #fff;
@@ -35,21 +43,27 @@ a:hover{
     display:none;
     color:white;
     padding-top:30px;
+    font-size: 28px;
+    padding-bottom: 20px;
 }
 .card h4{
     display:none;
+    font-size: 16px;
+    padding-bottom: 20px;
 }
 
 .card:hover h2{
     display:block;
+    font-size: 28px;
+    padding-bottom: 20px;
 }
 .card:hover h4{
     display:block;
+    font-size: 16px;
+    padding-bottom: 20px;
 }
 .card:hover{
-    background: rgb(53,152,254);
-    background: linear-gradient(0deg, rgba(53,152,254,1) 17%, rgba(241,241,247,1) 97%);
-
+    background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
 }
 .card:hover img{
     display:none;

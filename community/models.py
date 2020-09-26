@@ -6,6 +6,7 @@ from django.core.validators import MinLengthValidator
 class Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     tag_set = models.ManyToManyField('Tag', blank=True)
+    title = models.CharField(max_length = 50)
     message = models.TextField(
         validators=[MinLengthValidator(5)]
     )
