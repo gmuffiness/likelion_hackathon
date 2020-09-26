@@ -1,14 +1,13 @@
 {% extends "community/layout.html" %}
 {% load bootstrap4 %}
 
-{{ post.add_view }}
-
 {% block title %}
     Post detail pk#{{ post.pk }}
+    {{ post.add_view }}
 {% endblock title %}
 
 {% block content %}
-    <h2>Author  :  {{ post.author }}</h2>
+    <h2>글쓴이 : {{ post.author }}</h2>
 
     {% if post.photo %}
         <img src="{{ post.photo.url }}"/>
